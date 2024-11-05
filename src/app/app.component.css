@@ -1,0 +1,689 @@
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+  }
+  
+/* Estilos para el contenedor principal */
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  width: 100%;
+  padding: 10px;
+}
+
+
+/* Estilos para el menú superior */
+.menu-superior {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.menu-superior h2 {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* Estilos para los iconos */
+.icono {
+  display: flex;
+  align-items: center;
+  margin: 10px; /* Agregar espacio entre los iconos */
+}
+
+.icono a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.icono img {
+  width: 30px; /* Ajustar el tamaño de las imágenes */
+  height: auto; /* Mantener la proporción */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.icono img:hover {
+  transform: scale(1.3); /* Cambia el tamaño de la imagen al pasar el mouse */
+
+}
+
+/* Estilos para el navbar */
+.menu-navegador {
+  display: flex;
+  align-items: center;
+  list-style: none; /* Esto elimina los marcadores de la lista */
+}
+
+.menu-navegador a {
+  text-decoration: none; /* Eliminar el subrayado en los enlaces del menú */
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease; /* Transición suave del color */
+  cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el texto */
+}
+
+.menu-navegador a:hover {
+  color: rgb(200, 171, 7); /* Cambia el color del texto al pasar el mouse por encima */
+}
+
+.menu-navegador li {
+  margin-right: 50px; /* Agregar espacio entre los elementos del menú */
+  position: relative; /* Ajusta el posicionamiento de los elementos del menú */
+}
+@media screen and (max-width: 768px) {
+  /* Estilos para el contenedor principal */
+  .container-menu {
+    padding: 5px; /* Reducir el relleno */
+  }
+
+  /* Estilos para el menú superior */
+  .menu-superior h2 {
+    font-size: 16px; /* Reducir el tamaño de fuente */
+  }
+
+  /* Estilos para los iconos */
+  .icono {
+    margin: 5px; /* Reducir el espacio entre los iconos */
+  }
+
+  /* Estilos para el navbar */
+  .menu-navegador a {
+    font-size: 16px; /* Reducir el tamaño de fuente */
+  }
+
+  /* Estilos para el logo */
+  .img-logo {
+    width: 120px; /* Reducir el tamaño del logo */
+  }
+
+  /* Estilos para el submenu */
+  .submenu {
+    top: calc(100% + 5px); /* Ajustar la posición */
+    width: 200px; /* Reducir el ancho del submenu */
+  }
+
+  .submenu li {
+    padding: 5px 0; /* Reducir el espacio vertical */
+  }
+}
+
+    /* Media query para pantallas pequeñas */
+    @media screen and (max-width: 768px) {
+      /* Muestra el contenido del menú cuando la pantalla sea lo suficientemente pequeña */
+      .menu-responsive {
+        display: block;
+      }
+      
+      /* Estilos para el menú desplegado verticalmente */
+      .menu-navegador {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #132e88;
+        width: 100%;
+        padding: 10px;
+        position: absolute; /* Mantiene el menú flotante */
+        margin-bottom: 20px; /* Agrega margen inferior para desplazar el siguiente elemento */
+        z-index: 1000; /* Asegura que esté encima de otros elementos */
+        top: 10;
+        left: 0;
+      }
+
+      /* Estilos para los elementos del menú en pantalla pequeña */
+      .menu-navegador li {
+        margin-right: 0; /* Elimina el margen derecho para que los elementos estén alineados al centro */
+        margin-bottom: 10px; /* Agrega un margen inferior entre elementos */
+      }
+      
+    }
+
+.menu-icon span {
+  color: #ffffff; /* Cambia el color del icono a rojo */
+  font-size: 30px;
+}
+
+.menu-icon {
+  display: none; /* Oculta el botón de menú por defecto */
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Muestra el botón de menú en dispositivos móviles */
+  }
+}
+
+/* Estilos para el submenu */
+.submenu {
+  display: none; /* Inicialmente oculto */
+  position: absolute; /* Para que se posicione correctamente */
+  top: calc(100% + 10px); /* Alinea el submenu debajo del elemento padre */
+  left: 0; /* Alinea el submenu a la izquierda del elemento padre */
+  background-color: #ffffff; /* Color de fondo */
+  padding:0; /* Espaciado interno */
+  width: 250px; /* Ancho del submenu */
+  margin-top: -12px;
+  list-style: none; /* Esto elimina los marcadores de la lista */
+  text-align: center;
+  border: 1px solid #000000; /* Ancho, estilo y color del borde */
+  z-index: 2000; /* Asegura que esté encima de otros elementos */
+}
+
+.submenu a{
+  color: #000000;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-navegador li:hover .submenu,
+.submenu:hover {
+  display: block; /* Mostrar el submenu al pasar el mouse sobre el elemento padre o sobre el submenu */
+}
+
+.menu-navegador li .submenu {
+  display: none; /* Oculta el submenu cuando no está en uso */
+}
+
+.submenu:hover {
+  display: block; /* Muestra el submenu cuando el cursor está dentro del submenu */
+}
+
+.submenu li {
+  padding: 8px 0; /* Ajusta el espacio vertical */
+  margin-right: 0;
+}
+
+.submenu li:hover {
+  background-color: #d69f07;
+}
+
+.submenu li:hover a {
+  color: white;
+}
+
+/* Cambios para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .submenu {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Para que se posicione correctamente */
+    top: 100%; /* Alinea el submenu debajo del elemento padre */
+    left: 0; /* Alinea el submenu a la izquierda del elemento padre */
+    width: 100%; /* Ancho del submenu */
+    margin-top: -12px;
+    list-style: none; /* Esto elimina los marcadores de la lista */
+    text-align: center;
+    background-color: #075db3;
+  }
+  
+  .submenu a {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .menu-navegador li .submenu {
+    position: relative; /* Cambia la posición del submenu a relativa */
+    top: auto; /* Restablece la posición superior a automático */
+    left: auto; /* Restablece la posición izquierda a automático */
+    width:100%; /* Ancho del submenu igual al ancho del menú-navegador */
+    border: none; /* Elimina el borde del submenu */
+    margin-top: 0; /* Elimina el margen superior */
+  }
+
+  .submenu li:hover {
+    background-color: #d69f07
+  }
+
+  .menu-navegador li .submenu li {
+    display: block; /* Muestra cada elemento del submenu como un bloque */
+    margin: 0;
+    width: 100%; /* Ancho del submenu igual al ancho del menú-navegador */
+  }
+
+  .menu-navegador li .submenu li:last-child {
+    border-bottom: none; /* Elimina el borde inferior del último elemento */
+  }
+
+  .menu-navegador li:hover .submenu {
+    display: block; /* Muestra el submenu al pasar el ratón */
+    position: static; /* Restablece la posición a estática */
+  }
+
+  .icon-repert {
+    width: 10; /* Ancho deseado para la imagen */
+    height: 10px; /* Altura deseada para la imagen */
+    margin-left: 15px; /* Ajusta el margen izquierdo según sea necesario */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+  }
+  
+}
+
+/* Estilos para el logo */
+.img-logo {
+  width: 150px; /* Ajustar el tamaño del logo */
+  height: auto; /* Mantener la proporción */
+}
+
+/* Estilos generales para #contrato */
+#contrato {
+  text-align: center; /* Centra el contenido horizontalmente */
+  padding: 50px 20%; /* Ajusta el relleno superior e inferior y los márgenes laterales para dispositivos de pantalla más grande */
+  background-color: #d69f07;
+  margin: 0; /* Asegúrate de que no haya márgenes */
+  align-items: center;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  #contrato {
+    padding: 30px 5%; /* Reduce el relleno y los márgenes laterales para dispositivos móviles */
+  }
+
+  #contrato h1 {
+    font-size: 40px; /* Reduce el tamaño del título para dispositivos móviles */
+    margin-bottom: 30px; /* Reduce el espacio inferior para dispositivos móviles */
+    font-family: Mexica;
+    color: white;
+    padding: 5px;
+  }
+
+  #contrato h3 {
+    font-size: 50px; /* Reduce el tamaño del subtítulo para dispositivos móviles */
+    margin-bottom: 15px; /* Reduce el espacio inferior para dispositivos móviles */
+    font-family: Cali;
+    color: #ffffff;
+    line-height: 0.8; /* Reducir el interlineado */
+  }
+
+  #contrato h4 {
+    font-size: 20px; /* Reduce el tamaño del texto para dispositivos móviles */
+    margin-bottom: 30px; /* Reduce el espacio inferior para dispositivos móviles */
+    color: white;
+  }
+
+  #contrato img {
+    width: 50%; /* Ajusta el ancho de la imagen para que ocupe todo el ancho disponible */
+    max-width: 300px; /* Establece un ancho máximo para la imagen en dispositivos móviles */
+    margin: 0 auto 20px; /* Centra la imagen horizontalmente y agrega un margen inferior */
+    margin-top: 50;
+  }
+}
+
+/* Estilos específicos para dispositivos de pantalla más grande */
+@media screen and (min-width: 768px) {
+  #contrato {
+    text-align: center; /* Centra el contenido horizontalmente */
+    padding: 50px 20%; /* Ajusta el relleno superior e inferior y los márgenes laterales */
+    background-color: #d69f07;
+    margin: 0; /* Asegúrate de que no haya márgenes */
+  }
+  
+  /* Estilos para el contenedor de columnas */
+  .column-container {
+    display: flex; /* Utiliza flexbox para los elementos del contenedor */
+    justify-content: space-between; /* Distribuye uniformemente el espacio entre las columnas */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+  }
+  
+  /* Estilos para cada columna */
+  .columna {
+    flex-basis: calc(25% - 20px); /* Establece el ancho de cada columna */
+    box-sizing: border-box; /* Incluye el padding en el ancho de la columna */
+    padding: 10px; /* Añade un espacio interior a las columnas */
+    text-align: left; /* Alinea el texto a la izquierda dentro de las columnas */
+  }
+
+  #contrato h1 {
+    font-size: 50px; /* Restaura el tamaño del título para dispositivos de pantalla más grande */
+    margin-bottom: 30px; /* Restaura el espacio inferior para dispositivos de pantalla más grande */
+    font-family: Mexica;
+    color: #ffffff;
+  }
+
+  #contrato h3 {
+    font-size: 50px; /* Restaura el tamaño del subtítulo para dispositivos de pantalla más grande */
+    margin-bottom: 20px; /* Restaura el espacio inferior para dispositivos de pantalla más grande */
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: Cali;
+    line-height: 0.8; /* Reducir el interlineado */
+  }
+
+  #contrato h4 {
+    font-size: 20px; /* Restaura el tamaño del texto para dispositivos de pantalla más grande */
+    margin-bottom: 10px; /* Restaura el espacio inferior para dispositivos de pantalla más grande */
+    color: #ffffff;
+  }
+
+  #contrato img {
+    width: 100%; /* Restaura el ancho de la imagen para dispositivos de pantalla más grande */
+    max-width: none; /* Elimina el ancho máximo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+}
+
+
+#tercero {
+  text-align: center; /* Centra el contenido horizontalmente */
+  padding: 50px 20%; /* Ajusta el relleno superior e inferior y los márgenes laterales */
+  background-color: #242166;
+  margin: 0; /* Asegúrate de que no haya márgenes */
+  align-items: center;
+  justify-content: center; /* Esto centra verticalmente el contenido */
+  flex-direction: column;
+  display: flex;
+}
+
+#tercero h1 {
+  font-size: 50px; /* Tamaño del texto */
+  color: #ffffff; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Mexica;
+}
+
+#tercero img {
+  width: 70%; /* Ajusta el ancho de la imagen según sea necesario */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+#tercero h4 {
+  font-size: 50px; /* Tamaño del texto */
+  color: #ffffff; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Cali;
+}
+
+/* Estilos generales del botón */
+#tercero button {
+  background-color: transparent; /* Fondo transparente */
+  border: 1 solid; /* Sin borde */
+  border-color: #ffffff;
+  cursor: pointer; /* Cursor tipo puntero al pasar el mouse */
+  display: flex; /* Para que los elementos dentro del botón se alineen en línea */
+  align-items: center; /* Alinea verticalmente los elementos */
+  color: inherit; /* Hereda el color del texto del contenedor padre */
+  font-size: 16px; /* Tamaño de fuente */
+  color: #fff;
+  font-size: 30px;
+  padding: 10px;
+  font-family: Mexicana;
+  font-weight: bold;
+}
+
+/* Estilos para la imagen dentro del botón */
+#tercero button img {
+  width: 50px; /* Ancho de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-right: 20px; /* Espacio a la derecha de la imagen */
+}
+
+#tercero h3 {
+  font-size: 25px; /* Tamaño del texto */
+  color: #ffffff; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Mexicana;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#tercero button:hover {
+  background-color: #ffffff; /* Cambia el color de fondo al pasar el cursor */
+  color: #242166; /* Cambia el color del texto al pasar el cursor */
+}
+
+@media screen and (max-width: 768px) {
+  #tercero {
+    padding: 50px 10%; /* Ajustar el relleno superior e inferior y los márgenes laterales para dispositivos móviles */
+  }
+
+  #tercero h1 {
+    font-size: 40px; /* Reducir el tamaño del texto para dispositivos móviles */
+  }
+
+  #tercero img {
+    width: 100%; /* Ajustar el ancho de la imagen al 100% para dispositivos móviles */
+    margin-bottom: 20px; /* Agregar espacio inferior */
+  }
+
+  #tercero h4 {
+    font-size: 40px; /* Reducir el tamaño del texto para dispositivos móviles */
+    line-height: 0.8; /* Reducir el interlineado */
+  }
+
+  #tercero button {
+    font-size: 20px; /* Reducir el tamaño de fuente del botón para dispositivos móviles */
+    padding: 8px; /* Ajustar el relleno del botón para dispositivos móviles */
+  }
+
+  #tercero button img {
+    width: 30px; /* Reducir el tamaño de la imagen dentro del botón para dispositivos móviles */
+    margin-right: 10px; /* Ajustar el margen derecho de la imagen dentro del botón para dispositivos móviles */
+  }
+
+  #tercero h3 {
+    font-size: 20px; /* Reducir el tamaño del texto para dispositivos móviles */
+  }
+}
+
+
+#cuarto {
+  text-align: center; /* Centra el contenido horizontalmente */
+  padding: 50px 20%; /* Ajusta el relleno superior e inferior y los márgenes laterales */
+  background-color: #ffffff;
+  margin: 0; /* Asegúrate de que no haya márgenes */
+  align-items: center;
+  justify-content: center; /* Esto centra verticalmente el contenido */
+  flex-direction: column;
+  display: flex;
+}
+
+#cuarto h1 {
+  font-size: 50px; /* Tamaño del texto */
+  color: #000000; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Cali;
+}
+
+@media screen and (max-width: 768px) {
+  #cuarto {
+    padding: 50px 10%; /* Ajustar el relleno superior e inferior y los márgenes laterales para dispositivos móviles */
+  }
+
+  #cuarto h1 {
+    font-size: 40px; /* Reducir el tamaño del texto para dispositivos móviles */
+    margin-bottom: 10px; /* Reducir el espacio inferior para dispositivos móviles */
+    line-height: 0.8; /* Reducir el interlineado */
+  }
+}
+
+
+#foot {
+  text-align: center; /* Centra el contenido horizontalmente */
+  padding: 50px 20%; /* Ajusta el relleno superior e inferior y los márgenes laterales */
+  background-color: #000000;
+  margin: 0; /* Asegúrate de que no haya márgenes */
+  align-items: center;
+  justify-content: center; /* Esto centra verticalmente el contenido */
+  flex-direction: column;
+  display: flex;
+}
+
+#foot img{
+  width: 300px;
+  max-height: auto;
+  margin-right: 20px;
+}
+
+#foot h1 {
+  padding-top: 20px;
+  font-size: 50px; /* Tamaño del texto */
+  color: #ffffff; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Cali;
+}
+
+@media screen and (max-width: 768px) {
+  #foot {
+    padding: 50px 10%; /* Ajustar el relleno superior e inferior y los márgenes laterales para dispositivos móviles */
+  }
+
+  #foot h1 {
+    font-size: 40px; /* Reducir el tamaño del texto para dispositivos móviles */
+    margin-bottom: 10px; /* Reducir el espacio inferior para dispositivos móviles */
+    line-height: 0.8; /* Reducir el interlineado */
+  }
+
+  #foot img {
+    width: 200px; /* Reducir el ancho de la imagen para dispositivos móviles */
+    margin-right: 0; /* Eliminar el margen derecho para dispositivos móviles */
+    margin-bottom: 20px; /* Agregar un espacio inferior entre la imagen y el texto para dispositivos móviles */
+  }
+}
+
+#ultimo {
+  text-align: center; /* Centra el contenido horizontalmente */
+  padding-top: 10px; /* Ajusta el relleno superior e inferior y los márgenes laterales */
+  background-color: #000000;
+  margin-top: 1px; /* Asegúrate de que no haya márgenes */
+  align-items: center;
+  justify-content: center; /* Esto centra verticalmente el contenido */
+  flex-direction: column;
+  display: flex;
+}
+
+#ultimo h1 {
+  font-size: 20px; /* Tamaño del texto */
+  color: #ffffff; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Mexicano;
+  padding: 10px;
+}
+
+  /* ------------- Estilos generales -------------------- */
+/* Estilos generales del botón flotante */
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background: none; /* Fondo transparente */
+}
+
+/* Estilos de la imagen dentro del botón */
+.boton-flotante img {
+  width: 60px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto;
+  margin-right: 10px;
+}
+
+.boton-flotante:hover {
+  transform: scale(1.3); /* Cambia el tamaño de la imagen al pasar el mouse */
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  /* Ajusta el tamaño del botón flotante para dispositivos móviles */
+  .boton-flotante {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px;
+  }
+
+  /* Ajusta el tamaño de la imagen dentro del botón flotante para dispositivos móviles */
+  .boton-flotante img {
+    width: 40px;
+  }
+}
+
+
+    .carousel-item img {
+      transition: transform 0.3s ease; /* Agregar transición suave */
+      height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción de aspecto */
+      width: 100%; /* Para asegurar que las imágenes ocupen todo el ancho disponible */
+      max-height: 100%; /* Altura máxima para las imágenes */
+      object-fit: cover; /* Ajusta la imagen para que cubra el tamaño especificado */
+    }
+    
+    
+    .carousel-item img:hover {
+      transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
+    }
+    
+    .carousel {
+      position: relative;
+      max-width: 100%;
+      max-height: 600px;
+      overflow: hidden;
+      border-bottom: 10px solid #000000; /* Añade un borde de 10px sólido con color negro en la parte inferior */
+    }
+    
+    .carousel-inner {
+      display: flex;
+    }
+    
+    .carousel-item {
+      min-width: 100%;
+      overflow: hidden;
+    }
+    
+    .carousel img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .carousel-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 1.5em;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    
+    .carousel-control.prev {
+      left: 10px;
+    }
+    
+    .carousel-control.next {
+      right: 10px;
+    }
+    
+    /* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .carousel {
+    max-height: 300px; /* Reducir la altura del carrusel para dispositivos móviles */
+  }
+
+  .carousel-item img {
+    height: 200px; /* Permitir que la altura se ajuste automáticamente */
+    max-height: 300px; /* Altura máxima para las imágenes en dispositivos móviles */
+    width: 100%; /* Asegurar que las imágenes ocupen todo el ancho disponible */
+  }
+
+  .carousel-control {
+    font-size: 1em; /* Reducir el tamaño de la fuente de los controles */
+    padding: 5px; /* Reducir el espacio alrededor de los controles */
+  }
+}
+
+
+

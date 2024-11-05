@@ -1,0 +1,190 @@
+#inicio {
+  text-align: center; /* Centra el contenido horizontalmente */
+  padding-top: 50px;
+}
+
+#inicio h1 {
+  font-size: 50px; /* Tamaño del texto */
+  color: #d69f07; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Mexica;
+}
+
+#inicio h3 {
+  font-size: 50px; /* Tamaño del texto */
+  color: #000000; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Cali;
+}
+
+#inicio img {
+  width: 50%; /* Ajusta el ancho de la imagen según sea necesario */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+#repertorio {
+  padding: 50px; /* Añade espacio alrededor del contenido */
+  outline: 8px dashed #d69f07; /* agrega un borde discontinuo verde */
+  margin-top: 5%;
+  margin-bottom: 5%;}
+
+#repertorio h2 {
+  text-align: center;
+  font-size: 50px; /* Tamaño del texto */
+  color: #d69f07; /* Color del texto */
+  font-family: Mexica;
+  margin-bottom: 5%; /* Espacio inferior */
+}
+
+#repertorio ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina el margen predeterminado de la lista */
+  column-count: 3; /* Divide la lista en tres columnas */
+  column-gap: 10%; /* Espacio entre las columnas */
+}
+
+#repertorio li {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+  padding-left: 30px; /* Espacio a la izquierda para el icono */
+  position: relative;
+  display: inline-block; /* Muestra los elementos en línea */
+  width: 300px; /* Ancho fijo para cada elemento de la lista */
+}
+
+#repertorio li .icono {
+  display: inline-block;
+  width: 20px; /* Ancho del icono */
+  height: 20px; /* Altura del icono */
+  background-image: url('../../../assets/play.png'); /* URL del icono */
+  background-size: cover; /* Ajusta el tamaño del icono */
+  background-repeat: no-repeat; /* Evita que el icono se repita */
+  position: absolute;
+  left: 0; /* Posiciona el icono a la izquierda del elemento */
+  top: 50%; /* Coloca el icono en el centro verticalmente */
+  transform: translateY(-50%); /* Ajusta la posición vertical del icono */
+}
+
+
+
+.container {
+  align-items: center;
+}
+
+#inicio {
+  text-align: center; /* Centra el contenido horizontalmente */
+  padding-top: 30px;
+}
+
+#inicio h1 {
+  font-size: 50px; /* Tamaño del texto */
+  color: #d69f07; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Mexica;
+}
+
+#inicio h3 {
+  font-size: 50px; /* Tamaño del texto */
+  color: #000000; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: Cali;
+}
+
+#inicio img {
+  width: 50%; /* Ajusta el ancho de la imagen según sea necesario */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+#repertorio {
+  padding: 50px; /* Añade espacio alrededor del contenido */
+  outline: 8px dashed #d69f07; /* agrega un borde discontinuo verde */
+  margin-top: 5%;
+  margin-bottom: 5%;}
+
+#repertorio h2 {
+  text-align: center;
+  font-size: 50px; /* Tamaño del texto */
+  color: #d69f07; /* Color del texto */
+  font-family: Mexica;
+  margin-bottom: 5%; /* Espacio inferior */
+}
+
+#repertorio ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina el margen predeterminado de la lista */
+  column-count: 3; /* Divide la lista en tres columnas */
+  column-gap: 10%; /* Espacio entre las columnas */
+}
+
+#repertorio li {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+  padding-left: 30px; /* Espacio a la izquierda para el icono */
+  position: relative;
+  display: inline-block; /* Muestra los elementos en línea */
+  width: 300px; /* Ancho fijo para cada elemento de la lista */
+}
+
+#repertorio li .icono {
+  display: inline-block;
+  width: 20px; /* Ancho del icono */
+  height: 20px; /* Altura del icono */
+  background-image: url('../../../assets/play.png'); /* URL del icono */
+  background-size: cover; /* Ajusta el tamaño del icono */
+  background-repeat: no-repeat; /* Evita que el icono se repita */
+  position: absolute;
+  left: 0; /* Posiciona el icono a la izquierda del elemento */
+  top: 50%; /* Coloca el icono en el centro verticalmente */
+  transform: translateY(-50%); /* Ajusta la posición vertical del icono */
+}
+
+
+
+.container {
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  #inicio h1 {
+    font-size: 40px; /* Reducir el tamaño del texto para móvil */
+    padding: 5px;
+  }
+  
+  #inicio h3 {
+    font-size: 40px; /* Reducir el tamaño del texto para móvil */
+    padding-left: 10px; /* Reducir el padding izquierdo */
+    padding-right: 10px; /* Reducir el padding derecho */
+    line-height: 0.8; /* Reducir el interlineado */
+  }
+
+  #inicio img {
+    width: 80%; /* Ajustar el ancho de la imagen al 80% en dispositivos móviles */
+  }
+
+  #repertorio {
+    padding: 20px; /* Reducir el padding alrededor del contenido en dispositivos móviles */
+    margin-top: 40px;
+  }
+
+  #repertorio h2 {
+    font-size: 30px; /* Reducir el tamaño del título de la lista en dispositivos móviles */
+  }
+
+  #repertorio ul {
+    column-count: 2; /* Cambiar a una sola columna en dispositivos móviles */
+    column-gap: 1; /* Eliminar el espacio entre las columnas en dispositivos móviles */
+  }
+
+  #repertorio li {
+    font-size: 16px; /* Reducir el tamaño de fuente de los elementos de la lista en dispositivos móviles */
+    width: auto; /* Ancho automático para adaptarse al contenido en dispositivos móviles */
+    padding-left: 25px; /* Reducir el espacio a la izquierda para el icono en dispositivos móviles */
+  }
+
+  #repertorio li .icono {
+    width: 15px; /* Reducir el tamaño del icono en dispositivos móviles */
+    height: 15px; /* Reducir el tamaño del icono en dispositivos móviles */
+  }
+}

@@ -1,0 +1,74 @@
+#inicio {
+    text-align: center; /* Centra el contenido horizontalmente */
+    padding-top: 30px;
+    align-items: center;
+  }
+  
+  #inicio h1 {
+    font-size: 50px; /* Tamaño del texto */
+    color: #d69f07; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-family: Mexica;
+  }
+  
+  #inicio h3 {
+    font-size: 50px; /* Tamaño del texto */
+    color: #000000; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-family: Cali;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  
+  
+  #inicio img {
+    width: 50%; /* Para asegurar que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Para mantener la proporción de la imagen */
+  }
+
+  .img-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 50px;
+  }
+  
+  .img-fotos img {
+    width: 100%;
+    height: auto;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregar transición suave */
+    box-shadow: 0 12px 10px rgb(0, 0, 0); /* Agregar sombra */
+  }
+  
+  .img-fotos img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.695); /* Aumenta la sombra al pasar el mouse */
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .img-fotos {
+      grid-template-columns: repeat(1, 1fr); /* Cambia a dos columnas en dispositivos móviles */
+      padding: 20px; /* Reducir el espacio entre las imágenes en dispositivos móviles */
+    }
+  
+    .img-fotos img {
+      border-radius: 10px; /* Ajusta el radio de borde para que sea uniforme */
+    }
+
+    #inicio h1 {
+      font-size: 40px; /* Reducir el tamaño del texto para móvil */
+      padding: 5px;
+    }
+    
+    #inicio h3 {
+      font-size: 40px; /* Reducir el tamaño del texto para móvil */
+      padding-left: 10px; /* Reducir el padding izquierdo */
+      padding-right: 10px; /* Reducir el padding derecho */
+      line-height: 0.8; /* Reducir el interlineado */
+    }
+    
+  }
+  

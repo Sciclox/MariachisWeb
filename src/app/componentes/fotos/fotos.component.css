@@ -1,0 +1,170 @@
+#inicio {
+    text-align: center; /* Centra el contenido horizontalmente */
+    padding-top: 30px;
+    align-items: center;
+  }
+  
+  #inicio h1 {
+    font-size: 50px; /* Tamaño del texto */
+    color: #d69f07; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-family: Mexica;
+  }
+  
+  #inicio h3 {
+    font-size: 50px; /* Tamaño del texto */
+    color: #000000; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-family: Cali;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  
+  
+  #inicio img {
+    width: 50%; /* Para asegurar que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Para mantener la proporción de la imagen */
+  }
+
+  .img-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas flexibles */
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 50px;
+  }
+  
+  .img-fotos img {
+    width: 100%; /* Para asegurar que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Para mantener la proporción de la imagen */
+    max-height: 150px; /* Altura máxima para las imágenes */
+    object-fit: cover; /* Ajusta la imagen para que cubra el tamaño especificado */
+    cursor: pointer; /* Mostrar el cursor de tipo "mano" */
+    transition: transform 0.3s ease; /* Agregar transición suave */
+  }
+  
+  .img-fotos img:hover {
+    transform: scale(1.3); /* Agranda la imagen al pasar el mouse */
+  }
+
+ /* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+  }
+  
+/* Contenedor del modal */
+.modal-content {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80%;
+    margin-top: 5%;
+  }
+
+  /* Imagen en el modal */
+    .modal-content img {
+    width: auto; /* Ajustar automáticamente el ancho */
+    height: auto; /* Ajustar automáticamente la altura */
+    max-width: 100%; /* Asegurar que la imagen no exceda el tamaño del contenedor */
+    max-height: 100%; /* Asegurar que la imagen no exceda el tamaño del contenedor */
+  }
+  
+  /* Botón de cerrar */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos para los botones de navegación */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón por encima */
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Color de fondo más oscuro al pasar el ratón por encima */
+  }
+  
+  @media screen and (max-width: 768px) {
+    #inicio h1 {
+      font-size: 40px; /* Reducir el tamaño del texto para móvil */
+      padding: 5px;
+    }
+    
+    #inicio h3 {
+      font-size: 40px; /* Reducir el tamaño del texto para móvil */
+      padding-left: 10px; /* Reducir el padding izquierdo */
+      padding-right: 10px; /* Reducir el padding derecho */
+      line-height: 0.8; /* Reducir el interlineado */
+    }
+    
+    .img-fotos {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Columnas más estrechas para dispositivos móviles */
+      padding: 20px; /* Reducir el espacio entre las imágenes en dispositivos móviles */
+    }
+  
+    .img-fotos img {
+      max-height: 100px; /* Altura máxima más pequeña para las imágenes en dispositivos móviles */
+    }
+  
+    .modal-content {
+      width: 90%; /* Reducir el ancho del modal en dispositivos móviles */
+      max-width: 100%; /* Asegurar que el modal se ajuste completamente al ancho del dispositivo */
+      margin-top: 50%; /* Aumentar el margen superior */  
+    }
+  
+    .modal-content img {
+      max-width: 90%; /* Ajustar el ancho máximo de la imagen en el modal */
+      max-height: 90%; /* Ajustar la altura máxima de la imagen en el modal */
+    }
+  
+    .close {
+      font-size: 25px; /* Reducir el tamaño del botón de cerrar en dispositivos móviles */
+      top: 5px; /* Ajustar la posición del botón de cerrar */
+      right: 5px; /* Ajustar la posición del botón de cerrar */
+    }
+  
+    .prev, .next {
+      font-size: 15px; /* Reducir el tamaño de los botones de navegación en dispositivos móviles */
+      padding: 5px; /* Reducir el espacio dentro de los botones de navegación */
+    }
+  }
+  

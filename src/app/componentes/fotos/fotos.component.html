@@ -1,0 +1,18 @@
+<div>
+    <section id="inicio">
+      <h1>FOTOGRAFÍAS "MARIACHI ROMANCE"</h1>
+      <img class="separador" src="../assets/separador.png">
+      <h3>Bienvenido a nuestra galería de imágenes, donde puedes sumergirte en la vibrante atmósfera del Mariachi Romance. Cada fotografía captura la pasión, la tradición y la alegría que nos define como grupo. </h3>
+    </section>
+    <div class="img-fotos">
+        <img *ngFor="let image of images" [src]="image" class="foto-mariachi" (click)="openModal(image)">
+    </div>
+    
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg" [src]="selectedImage">
+    <button class="prev" (click)="prevImage()">&#10094;</button>
+    <button class="next" (click)="nextImage()">&#10095;</button>
+  </div>        
+</div>  
